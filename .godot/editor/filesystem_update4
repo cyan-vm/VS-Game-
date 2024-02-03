@@ -1,2 +1,7 @@
+res://survivors_game.tscn
+res://player.tscn
+res://mob.tscn
+res://gun.tscn
 res://bullet.tscn
-res://Bullet.gd
+res://main_timer.tscn
+res://main_timer.gd

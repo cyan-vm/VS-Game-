@@ -1,0 +1,33 @@
+extends Node2D
+
+var rng = RandomNumberGenerator.new()
+var my_sprite : Sprite2D
+
+func _ready():
+	# $Timer.start()
+	var screen = get_viewport_rect()
+	var grid = screen.size.y
+	print(grid / 8)				# 135
+	my_sprite = Sprite2D.new()
+	my_sprite.texture = $SquareRef.texture
+	my_sprite.position = Vector2(1200, 135)
+	add_child(my_sprite)
+	
+	for num in range(8):
+		var y_cordinate = 135
+		y_cordinate += 135
+		print(y_cordinate)
+
+func _process(delta):
+	# Move the character to the left
+	my_sprite.position.x -= 40 * delta
+
+# func _on_timer_timeout():
+#     my_sprite.position.x -= 40
+
+modify 
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.config/bspwm/bin:$HOME/.cargo/bin:$HOME/.local/bin:/home/cyan/.config/bin:/home/cyan/.nimble/bin:$HOME/go/bin/:$PATH"
+
+
+to add at the end
+/var/lib/flatpak/exports/bin/org.godotengine.Godot

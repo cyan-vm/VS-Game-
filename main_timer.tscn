@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4qflihw2p1nj"]
+
+[ext_resource type="Script" path="res://main_timer.gd" id="1_bkjqv"]
+[ext_resource type="Texture2D" uid="uid://b2ent6mf1y7w7" path="res://characters/happy_boo/square_ref.png" id="1_qgk5f"]
+
+[node name="main_timer" type="Node2D"]
+script = ExtResource("1_bkjqv")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="SquareRef" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(310, 135)
+texture = ExtResource("1_qgk5f")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
